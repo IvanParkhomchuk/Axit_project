@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    left: 0px;
+    top: 0px;
+}
+
+img {
+    width: 79px;
+    height: 27px;
+    padding: 21px 150px;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    width: 58px;
+    height: 11px;
+    left: 811px;
+    top: 29px;
+    color: blanchedalmond;
+    flex-direction: row;
+}
+
+.nav_link {
+    list-style-type: none;
+}
