@@ -26,9 +26,16 @@ img {
     font-family:'Open Sans', sans-serif;
 }
 
+.ul_link {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    flex-direction: row;
+}
+
 .nav_link {
-    margin: 0 50px;
     text-decoration: none;
     cursor: pointer;
     color: #ffffff;
+    padding: 23px 50px;
 }
