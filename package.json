@@ -1,0 +1,25 @@
+{
+  "name": "axit_project",
+  "version": "0.0.1",
+  "description": "Landing page tutorial",
+  "main": "index.html",
+  "scripts": {
+    "dev": "browser-sync start --server --files '**/*.css' 'index.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanParkhomchuk/Axit_project.git"
+  },
+  "keywords": [
+    "ivan",
+    "landing",
+    "html",
+    "css"
+  ],
+  "author": "Ivan Parkhomchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanParkhomchuk/Axit_project/issues"
+  },
+  "homepage": "https://github.com/IvanParkhomchuk/Axit_project#readme"
+}
