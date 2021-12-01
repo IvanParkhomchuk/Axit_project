@@ -14,7 +14,6 @@ img {
 }
 
 .nav {
-    position: relative;
     display: flex;
     align-items: center;
     text-align: right;
@@ -29,13 +28,11 @@ img {
 .ul_link {
     display: flex;
     list-style-type: none;
-    margin: 0px;
-    flex-direction: row;
+    margin: 0;
 }
 
 .nav_link {
     text-decoration: none;
-    cursor: pointer;
     color: #ffffff;
     padding: 23px 50px;
 }
