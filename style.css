@@ -14,16 +14,25 @@ img {
 }
 
 .nav {
-    position: relative;
     display: flex;
-    width: 58px;
-    height: 11px;
-    left: 811px;
-    top: 29px;
-    color: blanchedalmond;
+    align-items: center;
+    text-align: right;
+    color: #ffffff;
     flex-direction: row;
+    flex-flow: row;
+    width: 100%;
+    justify-content: flex-end;
+    font-family:'Open Sans', sans-serif;
+}
+
+.ul_link {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
 }
 
 .nav_link {
-    list-style-type: none;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 23px 50px;
 }
