@@ -40,7 +40,7 @@ header img {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: url("../images/backgroundimg.png");
+    background-image: url("images/backgroundimg.png");
     height: 933px;
     background-size: cover;
     background-repeat: no-repeat;
