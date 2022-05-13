@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
         <script src="https://kit.fontawesome.com/8f8bb7b952.js" crossorigin="anonymous"></script>
+
+        <script src="script.js" defer></script>
     </head>
     <body>
         <header class="header">
@@ -78,21 +80,49 @@
         <section class="tabs">
             <div class="block-width tabs-block">
                 <div class="tabs-block-p">
-                    <p style="border-top-left-radius: 3px; border-top-right-radius: 3px; background-color: #ff8b38;">TAB 1</p>
-                    <p>TAB 2</p>
-                    <p style="border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">TAB 3</p>
+                    <p class="tab1 tabs-block-p-checked" style="border-top-left-radius: 3px; border-top-right-radius: 3px;">TAB 1</p>
+                    <p class="tab2 tabs-block-p-unchecked">TAB 2</p>
+                    <p class="tab3 tabs-block-p-unchecked" style="border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">TAB 3</button>
                 </div>
 
                 <div class="tabs-block-text">
-                    <h3>Tabs with soft transition effect.</h3>
+                    <div class="tabs-block-slider">
+                        <div class="tabs-block-slider-line">
+                            <div class="tabs-block-slider-block">
+                                <h3>Tab 1 with soft transition effect.</h3>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
-                        bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.
-                        Justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
-                        penatibus et magnis dis parturient montes.</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                    when an unknown printer took a galley of type and scrambled it to make a 
+                                    type specimen book.</p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
-                        bibendum laoreet.</p>
+                                <p>It has survived not only five centuries, but also the leap into electronic 
+                                    typesetting, remaining essentially unchanged.</p>
+                            </div>
+                            <div>
+                                <h3>Tab 2 with soft transition effect.</h3>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+                                    bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.
+                                    Justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes.</p>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+                                    bibendum laoreet.</p>
+                            </div>
+                            <div>
+                                <h3>Tab 3 with soft transition effect.</h3>
+
+                                <p>It is a long established fact that a reader will be distracted by the readable 
+                                    content of a page when looking at its layout. The point of using Lorem Ipsum 
+                                    is that it has a more-or-less normal distribution of letters, as opposed to using 
+                                    'Content here, content here'.</p>
+
+                                <p>Many desktop publishing packages use Lorem Ipsum as their default model text, will 
+                                    uncover many web sites still in their infancy.</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <button>Download</button>
                 </div>
@@ -339,6 +369,5 @@
                 <p>&copy; 2015 Axure Themes</p>
             </div>
         </footer>
-        <script src="./script.js"></script>
     </body>
 </html>

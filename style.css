@@ -11,6 +11,7 @@
 }
 
 .header {
+    z-index: 1;
     display: flex;
     position: fixed;
     width: 100%;
@@ -138,7 +139,7 @@ header img {
     border-radius: 0px 0px 5px 5px;
 }
 
-input[type=text], input[type=email], input[type=password], textarea {
+input[type=text], input[type=email], input[type=password] {
     font-size: large;
     margin: 20px 0px;
     border-bottom: 1px solid #bdbdbd;
@@ -191,11 +192,39 @@ button {
     margin: auto;
 }
 
+
 .tabs-block-p p {
     padding: 35px 25px;
-    background-color: #333333;
     color: #fff;
     margin: 1px 0;
+    cursor: pointer;
+}
+
+.tabs-block-p-unchecked {
+    background-color: #333333;
+}
+
+.tabs-block-p-checked {
+    background-color: #ff8b38;
+}
+
+.tabs-block-slider {
+    height: 205px;
+    /* border: 3px solid black; */
+    overflow: hidden;
+}
+
+.tabs-block-slider-line {
+    height: 205px;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    position: relative;
+    transition: all ease .5s;
+}
+
+.tabs-block-slider-block {
+    height: 205px;
 }
 
 .tabs-block-text {
@@ -285,10 +314,12 @@ button {
     border: 2px solid #ff8b38;
     border-radius: 50%;
     font-size: 20px;
-    padding: 20px;
     margin-right: 20px;
-    height: 20px;
-    width: 20px;
+    height: 64px;
+    width: 64px;
+    line-height: 64px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .standard-picture-section {
@@ -330,11 +361,15 @@ button {
 
 .features i {
     font-size: 25px;
-    padding: 15px;
     color: #ff8b38;
     border: 2px solid #ff8b38;
     border-radius: 50%;
     margin: 20px 0;
+    height: 64px;
+    width: 64px;
+    line-height: 64px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .features-info h3 {
@@ -441,6 +476,19 @@ button {
     border-radius: 3px;
     font-style: italic;
     color: #86878b;
+    position: relative;
+}
+
+.smbd-review-text::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background-color: #f5f5f5;
+    width: 30px;
+    height: 30px;
+    top: 100%;
+    left: 10%;
+    transform: rotate(45deg) skew(10deg, 10deg) translate(-95%);
 }
 
 .smbd-review-info {
@@ -522,8 +570,15 @@ button {
 }
 
 .contacts input, .contacts textarea {
-    padding: 5px 15px;
     width: 500px;
+    font-size: large;
+    margin: 20px 0px;
+    padding: 5px 15px;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.contacts textarea {
+    vertical-align: top;
 }
 
 .contacts-btn {
