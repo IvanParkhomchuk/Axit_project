@@ -4,11 +4,14 @@
   "description": "Landing page tutorial",
   "main": "index.html",
   "scripts": {
-    "dev": "browser-sync start --server --files '**/*.css' 'index.html'"
+    "dev": "browser-sync start --server --files '**/*.css' '**/*.js' 'index.html'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IvanParkhomchuk/Axit_project.git"
+  },
+  "dependencies": {
+    "browser-sync": "2.27.7"
   },
   "keywords": [
     "ivan",
