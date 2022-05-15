@@ -4,6 +4,10 @@
     border: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .block-width {
     width: 70em;
     display: flex;
@@ -192,7 +196,6 @@ button {
     margin: auto;
 }
 
-
 .tabs-block-p p {
     padding: 35px 25px;
     color: #fff;
@@ -209,7 +212,7 @@ button {
 }
 
 .tabs-block-slider {
-    height: 205px;
+    height: 200px;
     /* border: 3px solid black; */
     overflow: hidden;
 }
