@@ -147,7 +147,7 @@ input[type=text], input[type=email], input[type=password] {
     font-size: large;
     margin: 20px 0px;
     border-bottom: 1px solid #bdbdbd;
-} 
+}
 
 button {
     cursor: pointer;
@@ -196,18 +196,26 @@ button {
     margin: auto;
 }
 
-.tabs-block-p p {
+.tabs-block .tab-btn {
+    background-color: #333333;
+    display: block;
     padding: 35px 25px;
     color: #fff;
     margin: 1px 0;
     cursor: pointer;
 }
 
-.tabs-block-p-unchecked {
-    background-color: #333333;
+.tabs-block .tab-btn:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
-.tabs-block-p-checked {
+.tabs-block .tab-btn:first-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.tabs-block .tab-btn.tab-btn-checked {
     background-color: #ff8b38;
 }
 
@@ -223,7 +231,7 @@ button {
     flex-direction: column;
     top: 0;
     position: relative;
-    transition: all ease .5s;
+    transition: transform ease .5s;
 }
 
 .tabs-block-slider-block {
@@ -453,8 +461,8 @@ button {
 }
 
 .pricing-p-font h4 {
-    color: white; 
-    background-color: #ff8b38; 
+    color: white;
+    background-color: #ff8b38;
     border-bottom: 5px solid #ff8b38;
 }
 
