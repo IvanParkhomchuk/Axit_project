@@ -79,27 +79,33 @@
 
         <section class="tabs">
             <div class="block-width tabs-block">
-                <div class="tabs-block-p">
-                    <p class="tab1-btn tabs-block-p-checked" style="border-top-left-radius: 3px; border-top-right-radius: 3px;">TAB 1</p>
-                    <p class="tab2-btn tabs-block-p-unchecked">TAB 2</p>
-                    <p class="tab3-btn tabs-block-p-unchecked" style="border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">TAB 3</button>
+                <div class="tabs-block">
+                    <button id="tabBtn1" class="tab-btn">
+                        TAB 1
+                    </button>
+                    <button id="tabBtn2" class="tab-btn">
+                        TAB 2
+                    </button>
+                    <button id="tabBtn3" class="tab-btn">
+                        TAB 3
+                    </button>
                 </div>
 
                 <div class="tabs-block-text">
                     <div class="tabs-block-slider">
-                        <div class="tabs-block-slider-line">
-                            <div class="tabs-block-slider-block">
+                        <div id="scrollableContainer" class="tabs-block-slider-line">
+                            <div data-tab-btn-id="tabBtn1" class="tabs-block-slider-block">
                                 <h3>Tab 1 with soft transition effect.</h3>
 
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    when an unknown printer took a galley of type and scrambled it to make a 
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a
                                     type specimen book.</p>
 
-                                <p>It has survived not only five centuries, but also the leap into electronic 
+                                <p>It has survived not only five centuries, but also the leap into electronic
                                     typesetting, remaining essentially unchanged.</p>
                             </div>
-                            <div>
+                            <div data-tab-btn-id="tabBtn2">
                                 <h3>Tab 2 with soft transition effect.</h3>
 
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
@@ -110,15 +116,15 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
                                     bibendum laoreet.</p>
                             </div>
-                            <div>
+                            <div data-tab-btn-id="tabBtn3">
                                 <h3>Tab 3 with soft transition effect.</h3>
 
-                                <p>It is a long established fact that a reader will be distracted by the readable 
-                                    content of a page when looking at its layout. The point of using Lorem Ipsum 
-                                    is that it has a more-or-less normal distribution of letters, as opposed to using 
+                                <p>It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout. The point of using Lorem Ipsum
+                                    is that it has a more-or-less normal distribution of letters, as opposed to using
                                     'Content here, content here'.</p>
 
-                                <p>Many desktop publishing packages use Lorem Ipsum as their default model text, will 
+                                <p>Many desktop publishing packages use Lorem Ipsum as their default model text, will
                                     uncover many web sites still in their infancy.</p>
                             </div>
                         </div>
@@ -174,7 +180,7 @@
                         natoque penatibus et magnis dis parturient montes.</p>
                     <p style="padding-top: 20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
                         bibendum laoreet.</p>
-                </div>    
+                </div>
 
                 <img src="images/image_right_standard_u262.png" alt="city">
             </div>
