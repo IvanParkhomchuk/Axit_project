@@ -1,83 +1,66 @@
-autoSlider();
+(function() {
+    const ACTIVE_TAB_CLASS = 'tab-btn-checked';
+    const FIRST_ACTIVE_TAB_ID = 'tabBtn1';
+    const TIMEOUT = 2000;
 
-var offset = 0;
-var timer;
+    const tabs = {
+        tabBtn1: document.getElementById(FIRST_ACTIVE_TAB_ID),
+        tabBtn2: document.getElementById('tabBtn2'),
+        tabBtn3: document.getElementById('tabBtn3'),
+    };
+    const scrollableContainer = document.getElementById('scrollableContainer');
+    let activeTab = null;
+    let offset = 0;
 
-const tab1btn = document.querySelector('.tab1-btn');
-const tab2btn = document.querySelector('.tab2-btn');
-const tab3btn = document.querySelector('.tab3-btn');
-
-function autoSlider() {
-    timer = setTimeout(tabs, 5000);
-}
-
-const sliderLine = document.querySelector('.tabs-block-slider-line');
-
-function tabs() {
-    offset = offset - 200;
-
-    if (offset == 0) {
-        tab1btn.style.background = '#ff8b38';
-        tab2btn.style.background = '#333333';
-        tab3btn.style.background = '#333333';
-    }
-    else if (offset == -200) {
-        tab1btn.style.background = '#333333';
-        tab2btn.style.background = '#ff8b38';
-        tab3btn.style.background = '#333333';
-    }
-    else if (offset == -400) {
-        tab1btn.style.background = '#333333';
-        tab2btn.style.background = '#333333';
-        tab3btn.style.background = '#ff8b38';
-    }
-    
-    if (offset < -400) {
-        offset = 0;
-
-        tab1btn.style.background = '#ff8b38';
-        tab2btn.style.background = '#333333';
-        tab3btn.style.background = '#333333';
-
-        clearTimeout(timer);
+    function getScrollableSection(btnId) {
+        return document.querySelector(`[data-tab-btn-id="${btnId}"]`);
     }
 
-    sliderLine.style.top = offset + 'px';
-    autoSlider();
-}
+    function activateTab(btnId) {
+        if (activeTab) {
+            activeTab.classList.remove(ACTIVE_TAB_CLASS);
+        }
+        activeTab = tabs[btnId];
+        activeTab.classList.add(ACTIVE_TAB_CLASS);
+        const section = getScrollableSection(btnId);
+        offset = scrollableContainer.getBoundingClientRect().y - section.getBoundingClientRect().y;
+        scrollableContainer.style.transform = `translateY(${offset + 'px'})`;
+    }
 
-tab1btn.addEventListener('click', function() {
-    offset = 0;
-    sliderLine.style.top = offset + 'px';
+    function getNextTab() {
+        const tabsArray = Object.values(tabs);
+        const currentIndex = tabsArray.indexOf(activeTab);
+        let nextIndex = currentIndex + 1;
+        if (nextIndex === tabsArray.length) {
+            nextIndex = 0;
+        }
+        return tabsArray[nextIndex];
+    }
 
-    tab1btn.style.background = '#ff8b38';
-    tab2btn.style.background = '#333333';
-    tab3btn.style.background = '#333333';
+    function setAutomaticSwitchTimer() {
+        return setInterval(() => {
+            const nextTab = getNextTab();
+            activateTab(nextTab.getAttribute('id'));
+        }, TIMEOUT)
+    }
 
-    clearTimeout(timer);
-    autoSlider();
-});
+    let timer = setAutomaticSwitchTimer();
 
-tab2btn.addEventListener('click', function() {
-    offset = -200;
-    sliderLine.style.top = offset + 'px';
+    function addTabListeners() {
+        const listener = (event) => {
+            clearInterval(timer);
+            activateTab(event.currentTarget.getAttribute('id'));
+            timer = setAutomaticSwitchTimer();
+        };
+        Object.values(tabs).forEach((btn) => {
+            btn.addEventListener('click', listener);
+        });
+    }
 
-    tab1btn.style.background = '#333333';
-    tab2btn.style.background = '#ff8b38';
-    tab3btn.style.background = '#333333';
+    function main() {
+        addTabListeners();
+        activateTab(FIRST_ACTIVE_TAB_ID);
+    }
 
-    clearTimeout(timer);
-    autoSlider();
-});
-
-tab3btn.addEventListener('click', function() {
-    offset = -400;
-    sliderLine.style.top = offset + 'px';
-
-    tab1btn.style.background = '#333333';
-    tab2btn.style.background = '#333333';
-    tab3btn.style.background = '#ff8b38';
-
-    clearTimeout(timer);
-    autoSlider();
-});
+    main();
+})()
